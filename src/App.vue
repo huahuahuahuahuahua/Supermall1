@@ -1,7 +1,12 @@
 <template>
-  <div id="app">
-    <main-tab-bar></main-tab-bar>
-    <router-view/>
+  <div id="app" class="wrapper">
+
+<router-view v-slot="{ Component }">
+  <keep-alive exclude="Detail">
+    <component :is="Component" />
+  </keep-alive>
+</router-view>
+      <main-tab-bar/>
   </div>
 
 </template>

@@ -5,7 +5,12 @@ export function getHomeMultidata(){
     url:'/home/multidata'
   })
 }
-
-function test(){
-  const names=['why','aaa']
+export function getHomeGoods(type,page){
+  return request({
+    url:'/home/data',
+    params:{
+      type,
+      page
+    }
+  })
 }
